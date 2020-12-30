@@ -3,10 +3,10 @@ import os
 import cv2
 
 # 图片输入地址
-in_path = 'C:\\Users\\DELL\\Desktop\\smoke_detection\\smoke_data_same_shape\\'
+in_path = 'C:\\Users\\DELL\\Desktop\\smoke_detection\\smoke_image_test_data_same_shape\\'
 
 # npy 输出地址
-out_path = 'C:\\Users\\DELL\\Desktop\\smoke_detection\\smoke_data_output_file\\'
+out_path = 'C:\\Users\\DELL\\Desktop\\smoke_detection\\smoke_image_test_data_output_file\\'
 
 # 输出数组
 res = []
@@ -22,6 +22,9 @@ for i, file in enumerate(files):
     # 压缩 255
     img = img / 255.0
 
+    # 格式转换
+    img = img.astype(np.float32)
+
     # 添加到列表
     res.append(img)
 
@@ -32,4 +35,4 @@ res = np.array(res)
 print(res.shape)
 
 # 数组存为 npy
-np.save(out_path + "smoke_data.npy", res)
+np.save(out_path + "smoke_image_test_data.npy", res)

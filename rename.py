@@ -7,7 +7,7 @@ def jpg2png(jpg_path):
     img.save(jpg_path.strip('.jpg') + '.png')
 
 # 文件路径
-path = 'C:\\Users\\DELL\\Desktop\\smoke_detection\\非烟雾\\'
+path = 'C:\\Users\\DELL\\Desktop\\smoke_detection\\smoke_image_test_data_same_shape_wuyan\\'
 
 # 获取所有文件名称
 files = os.listdir(path)
@@ -23,7 +23,7 @@ for i, file in enumerate(files):
         # os.remove(path + file)
 
     # 新文件名称
-    NewName = os.path.join(path, str(i + 603) + '.png')
+    NewName = os.path.join(path, str(i+135) + '.png')
 
     # 旧文件名称
     OldName = os.path.join(path, file)
